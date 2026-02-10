@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGI Insurance Cover Letter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #003366;
+            padding-bottom: 20px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #003366;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+        }
+        .date {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        .address {
+            margin-bottom: 30px;
+        }
+        .greeting {
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #003366;
+            color: white;
+        }
+        .signature {
+            margin-top: 50px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">IGI INSURANCE LIMITED</div>
+        <div class="subtitle">Motor Insurance Division</div>
+        <div class="subtitle">Islamabad | Karachi | Lahore</div>
+    </div>
+
+    <div class="date">
+        Date: {{ policy_data.start_date or 'N/A' }}
+    </div>
+
+    <div class="address">
+        <strong>{{ client_data.name }}</strong><br>
+        {{ client_data.address }}<br>
+        {{ client_data.city }}, {{ client_data.country }}<br>
+        {% if client_data.phone1 %}Phone: {{ client_data.phone1 }}<br>{% endif %}
+        {% if client_data.email %}Email: {{ client_data.email }}<br>{% endif %}
+    </div>
+
+    <div class="greeting">
+        <strong>Dear {{ client_data.name }},</strong>
+    </div>
+
+    <div class="content">
+        <p><strong>Subject: Motor Insurance Policy - {{ policy_data.policy_number }}</strong></p>
+        
+        <p>Thank you for choosing IGI Insurance Limited for your motor insurance needs. We are pleased to provide you with comprehensive coverage for your vehicle(s) as detailed in the enclosed policy document.</p>
+
+        <h3>Policy Summary</h3>
+        <table>
+            <tr>
+                <th>Description</th>
+                <th>Amount ({{ policy_data.currency }})</th>
+            </tr>
+            <tr>
+                <td>Sum Insured</td>
+                <td>{{ "%.2f"|format(premium_summary.basic_premium) }}</td>
+            </tr>
+            <tr>
+                <td>Basic Premium</td>
+                <td>{{ "%.2f"|format(premium_summary.basic_premium) }}</td>
+            </tr>
+            <tr>
+                <td>Charges</td>
+                <td>{{ "%.2f"|format(premium_summary.charges) }}</td>
+            </tr>
+            <tr>
+                <td>Gross Premium</td>
+                <td>{{ "%.2f"|format(premium_summary.gross_premium) }}</td>
+            </tr>
+            <tr>
+                <td>Discounts</td>
+                <td>({{ "%.2f"|format(premium_summary.discounts) }})</td>
+            </tr>
+            <tr style="background-color: #f0f0f0; font-weight: bold;">
+                <td>Net Premium Payable</td>
+                <td>{{ "%.2f"|format(premium_summary.net_premium) }}</td>
+            </tr>
+        </table>
+
+        <h3>Coverage Period</h3>
+        <p>From: {{ policy_data.start_date or 'N/A' }} To: {{ policy_data.end_date or 'N/A' }}</p>
+
+        <p>Please review the enclosed policy document carefully. Should you have any questions or require clarification on any aspect of your coverage, please do not hesitate to contact us.</p>
+
+        <p>We appreciate your business and look forward to serving you.</p>
+    </div>
+
+    <div class="signature">
+        <p>Sincerely,</p>
+        <br><br>
+        <p><strong>IGI Insurance Limited</strong><br>
+        Motor Insurance Division<br>
+        Email: info@igiinsurance.com<br>
+        Phone: +92-51-111-244-244</p>
+    </div>
+
+    <div class="footer">
+        <p><strong>Important:</strong> Please keep this document with your vehicle at all times. This cover letter should be read in conjunction with the complete policy document.</p>
+    </div>
+</body>
+</html>
