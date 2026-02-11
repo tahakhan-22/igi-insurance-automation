@@ -33,8 +33,21 @@ const ClientsForm: React.FC = () => {
       const response = await clientsApi.list();
       setClients(response.data);
     } catch (err: any) {
-      setError(err.response?.data?.detail || 'Failed to load clients');
       console.error('Error loading clients:', err);
+      let errorMessage = 'Failed to load clients';
+      
+      if (err.response) {
+        // Server responded with error
+        errorMessage = err.response?.data?.detail || `Server error: ${err.response.status}`;
+      } else if (err.request) {
+        // Request made but no response
+        errorMessage = 'Cannot connect to server. Please ensure the backend is running.';
+      } else {
+        // Something else happened
+        errorMessage = err.message || 'An unexpected error occurred';
+      }
+      
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -197,6 +210,14 @@ const ClientsForm: React.FC = () => {
         <div className="alert alert-error">
           {error}
           <button onClick={() => setError(null)} className="alert-close">×</button>
+          {error.includes('Cannot connect') && (
+            <div style={{ marginTop: '10px' }}>
+              <button onClick={loadClients} className="btn btn-secondary" style={{ marginRight: '10px' }}>
+                🔄 Retry Connection
+              </button>
+              <small>Make sure backend is running: docker compose up</small>
+            </div>
+          )}
         </div>
       )}
 
