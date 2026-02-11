@@ -114,8 +114,8 @@ function App() {
                     <ul>
                       <li>GET /api/policies/{selectedPolicy.id}/{activeModule}/</li>
                       <li>POST /api/policies/{selectedPolicy.id}/{activeModule}/</li>
-                      <li>PUT /api/policies/{selectedPolicy.id}/{activeModule}/{{'{id}'}}</li>
-                      <li>DELETE /api/policies/{selectedPolicy.id}/{activeModule}/{{'{id}'}}</li>
+                      <li>PUT /api/policies/{selectedPolicy.id}/{activeModule}/&#123;id&#125;</li>
+                      <li>DELETE /api/policies/{selectedPolicy.id}/{activeModule}/&#123;id&#125;</li>
                     </ul>
                   </div>
                 </div>
