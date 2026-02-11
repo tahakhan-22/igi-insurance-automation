@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-azuretools.vscode-docker",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "rangav.vscode-thunder-client",
+    "redhat.vscode-yaml",
+    "mikestead.dotenv",
+    "christian-kohler.path-intellisense"
+  ]
+}

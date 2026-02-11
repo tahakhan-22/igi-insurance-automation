@@ -14,8 +14,9 @@ dist/
 build/
 
 # IDE
-.vscode/
 .idea/
+# Keep .vscode for workspace settings
+# .vscode/
 
 # Docker
 pgdata/
@@ -28,6 +29,8 @@ Thumbs.db
 *.json
 !package.json
 !tsconfig.json
+!tsconfig.node.json
+!.vscode/*.json
 credentials/
 token.json
 
