@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import MainHeader from './components/MainHeader';
 import ClientsForm from './components/forms/ClientsForm';
 import PoliciesForm from './components/forms/PoliciesForm';
+import AutomationsPanel from './components/forms/AutomationsPanel';
 import { policiesApi } from './api';
 import type { Policy } from './types';
 
@@ -44,6 +45,9 @@ function App() {
       
       case 'policies':
         return <PoliciesForm />;
+      
+      case 'automations':
+        return <AutomationsPanel />;
       
       case 'banks':
       case 'documents':

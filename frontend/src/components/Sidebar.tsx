@@ -10,6 +10,7 @@ interface SidebarProps {
 const modules = [
   'clients',
   'policies',
+  'automations',
   'banks',
   'documents',
   'product-setup',
