@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './styles/globals.css';
 import Sidebar from './components/Sidebar';
 import MainHeader from './components/MainHeader';
+import ClientsForm from './components/forms/ClientsForm';
 import { policiesApi } from './api';
 import type { Policy } from './types';
 
@@ -54,27 +55,33 @@ function App() {
           onCreatePolicy={handleCreatePolicy}
         />
         <div className="content-area">
-          {loading ? (
+          {loading && activeModule !== 'clients' ? (
             <div className="loading">Loading...</div>
           ) : (
-            <div className="form-section">
-              <h3>{activeModule.charAt(0).toUpperCase() + activeModule.slice(1)} Module</h3>
-              <p>
-                This is the {activeModule} module. Full CRUD forms would be implemented here.
-                For now, this demonstrates the layout and structure.
-              </p>
-              {selectedPolicy && (
-                <div style={{ marginTop: '20px' }}>
-                  <h4>Selected Policy: {selectedPolicy.policy_number}</h4>
-                  <p>Status: <span className={`status-badge ${selectedPolicy.status}`}>
-                    {selectedPolicy.status}
-                  </span></p>
-                  <p>Client ID: {selectedPolicy.client_id}</p>
-                  <p>Sum Insured: {selectedPolicy.currency} {selectedPolicy.sum_insured}</p>
-                  <p>Net Premium: {selectedPolicy.currency} {selectedPolicy.net_premium}</p>
+            <>
+              {activeModule === 'clients' ? (
+                <ClientsForm />
+              ) : (
+                <div className="form-section">
+                  <h3>{activeModule.charAt(0).toUpperCase() + activeModule.slice(1)} Module</h3>
+                  <p>
+                    This is the {activeModule} module. Full CRUD forms would be implemented here.
+                    For now, this demonstrates the layout and structure.
+                  </p>
+                  {selectedPolicy && (
+                    <div style={{ marginTop: '20px' }}>
+                      <h4>Selected Policy: {selectedPolicy.policy_number}</h4>
+                      <p>Status: <span className={`status-badge ${selectedPolicy.status}`}>
+                        {selectedPolicy.status}
+                      </span></p>
+                      <p>Client ID: {selectedPolicy.client_id}</p>
+                      <p>Sum Insured: {selectedPolicy.currency} {selectedPolicy.sum_insured}</p>
+                      <p>Net Premium: {selectedPolicy.currency} {selectedPolicy.net_premium}</p>
+                    </div>
+                  )}
                 </div>
               )}
-            </div>
+            </>
           )}
         </div>
       </div>
