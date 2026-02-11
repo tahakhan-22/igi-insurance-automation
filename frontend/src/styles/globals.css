@@ -581,3 +581,221 @@ body {
     padding: 10px 8px;
   }
 }
+
+/* Policy Context Styles */
+.policy-context-form {
+  padding: 20px;
+}
+
+.policy-info-card {
+  background: linear-gradient(135deg, #003366 0%, #0066cc 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.2);
+}
+
+.policy-info-card h4 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.policy-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-row .label {
+  font-size: 12px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-row .value {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.policy-info-card .badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.policy-info-card .badge-draft {
+  background-color: #ffd700;
+  color: #333;
+}
+
+.policy-info-card .badge-active {
+  background-color: #28a745;
+  color: white;
+}
+
+.policy-info-card .badge-expired {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.policy-info-card .badge-cancelled {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Module Placeholder */
+.module-placeholder {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.module-placeholder h3 {
+  color: #003366;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.module-placeholder p {
+  color: #666;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.status-text {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #ffd700;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+.api-info {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f0f7ff;
+  border-radius: 6px;
+  border: 1px solid #0066cc;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.api-info strong {
+  color: #003366;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.api-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.api-info li {
+  padding: 8px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #0066cc;
+  border-bottom: 1px solid #d4e7ff;
+}
+
+.api-info li:last-child {
+  border-bottom: none;
+}
+
+/* Additional Badge Styles for Tables */
+.badge-draft {
+  background-color: #ffd700;
+  color: #333;
+}
+
+.badge-active {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-expired {
+  background-color: #dc3545;
+  color: white;
+}
+
+.badge-cancelled {
+  background-color: #6c757d;
+  color: white;
+}
+
+.badge-Home,
+.badge-Office,
+.badge-Other {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-Home {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.badge-Office {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.badge-Other {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+/* Alert Info Style */
+.alert-info {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.alert-info strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.alert-info p {
+  margin: 8px 0;
+}
+
+.alert-info .btn {
+  margin-top: 10px;
+}
