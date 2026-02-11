@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Reminder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            border-radius: 5px 5px 0 0;
+            margin: -30px -30px 30px -30px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .alert-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .due-amount {
+            font-size: 32px;
+            font-weight: bold;
+            color: #d32f2f;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .due-date {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #003366;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">IGI INSURANCE LIMITED</div>
+            <div>Payment Reminder</div>
+        </div>
+
+        <p><strong>Dear {{ client_name }},</strong></p>
+
+        <div class="alert-box">
+            <strong>⚠️ Payment Reminder</strong>
+            <p>This is a friendly reminder that you have an upcoming payment due.</p>
+        </div>
+
+        <div class="due-amount">
+            PKR {{ "%.2f"|format(due_amount) }}
+        </div>
+
+        <div class="due-date">
+            <strong>Due Date:</strong> {{ due_date }}
+        </div>
+
+        <p>To ensure uninterrupted coverage of your insurance policy, please arrange for the payment of the above amount before the due date.</p>
+
+        <h3>Payment Instructions:</h3>
+        <ul>
+            <li>Visit your nearest IGI Insurance branch</li>
+            <li>Make a bank transfer to our designated account</li>
+            <li>Use our online payment portal</li>
+            <li>Contact our customer service for assistance</li>
+        </ul>
+
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p>
+                <strong>Phone:</strong> +92-51-111-244-244<br>
+                <strong>Email:</strong> payments@igiinsurance.com<br>
+                <strong>Website:</strong> www.igiinsurance.com
+            </p>
+        </div>
+
+        <p>If you have already made the payment, please disregard this reminder. If you have any questions or need assistance, please don't hesitate to contact us.</p>
+
+        <p>Thank you for choosing IGI Insurance Limited.</p>
+
+        <p><strong>Best regards,</strong><br>
+        IGI Insurance Limited<br>
+        Customer Service Team</p>
+
+        <div class="footer">
+            <p><strong>Important Notice:</strong></p>
+            <p>This is an automated reminder. Timely payment ensures continuous coverage and avoids policy lapse.</p>
+            <p style="margin-top: 15px;">IGI Insurance Limited | Head Office: IGI House, 63-E Jinnah Avenue, Blue Area, Islamabad</p>
+        </div>
+    </div>
+</body>
+</html>
