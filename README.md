@@ -5,6 +5,7 @@ Complete backend-driven insurance automation system for IGI Insurance to streaml
 ## 📖 Documentation
 
 - **🚀 [Getting Started Guide](GETTING_STARTED.md)** - **START HERE!** Complete setup instructions for new users
+- **🔧 [Troubleshooting Guide](TROUBLESHOOTING.md)** - Solutions for common issues and errors
 - **📋 [Implementation Summary](IMPLEMENTATION_SUMMARY.md)** - Technical architecture and features
 - **🔒 [Security Fixes](SECURITY_FIXES.md)** - Security patches and updates
 

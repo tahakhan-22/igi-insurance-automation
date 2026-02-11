@@ -13,6 +13,7 @@ Welcome to the IGI Insurance Automation System! This index will help you find th
 | Document | Purpose | When to Use |
 |----------|---------|-------------|
 | **[GETTING_STARTED.md](GETTING_STARTED.md)** | Complete setup guide with step-by-step instructions | First time setup, installing prerequisites, running the application |
+| **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** | Solutions for common errors and issues | When you encounter build errors, Docker issues, or other problems |
 | **[README.md](README.md)** | Project overview, features, and quick reference | Understanding what the system does, quick start |
 | **[VSCODE_SETUP.md](VSCODE_SETUP.md)** | VS Code configuration and tips | Setting up your IDE for optimal development experience |
 
@@ -51,7 +52,7 @@ Welcome to the IGI Insurance Automation System! This index will help you find th
 → [IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)
 
 **...troubleshoot an issue**
-→ [Troubleshooting in GETTING_STARTED.md](GETTING_STARTED.md#-troubleshooting)
+→ [TROUBLESHOOTING.md](TROUBLESHOOTING.md) or [Troubleshooting in GETTING_STARTED.md](GETTING_STARTED.md#-troubleshooting)
 
 **...use the API**
 → [API Endpoints in README.md](README.md#-api-endpoints) + http://localhost:8000/docs
@@ -73,6 +74,19 @@ Comprehensive setup guide covering:
 - VS Code integration tips
 
 **Start here if:** You've just cloned the repository
+
+### TROUBLESHOOTING.md (NEW)
+Comprehensive troubleshooting guide:
+- Docker build errors (package installation failures)
+- Windows-specific issues (PowerShell paths, line endings)
+- Port conflicts
+- Database connection issues
+- Frontend/Backend errors
+- Environment configuration problems
+- Performance and network issues
+- Debug commands and clean slate restart
+
+**Start here if:** You're encountering errors or issues
 
 ### README.md (204 lines)
 Project overview including:

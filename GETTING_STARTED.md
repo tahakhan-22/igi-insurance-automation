@@ -30,6 +30,8 @@ git clone https://github.com/tahakhan-22/igi-insurance-automation.git
 cd igi-insurance-automation
 ```
 
+> 💡 **Note:** After cloning, you'll be inside the `igi-insurance-automation` directory. You don't need to `cd` into another subdirectory - you're already in the right place!
+
 ### Step 2: Configure Environment Variables
 
 Create your environment configuration file:
@@ -215,12 +217,24 @@ netstat -ano | findstr :3000
 
 ### Docker Build Fails
 
+If you see package installation errors (like `libgdk-pixbuf2.0-0` not found):
+
 ```bash
+# Make sure you have the latest code
+git pull origin main
+
 # Clean up Docker and try again
 docker compose down -v
 docker system prune -a
 docker compose up --build
 ```
+
+**Common causes:**
+- Outdated Dockerfile with obsolete package names (fixed in latest version)
+- Network issues during package download
+- Insufficient disk space
+
+If the problem persists, check the specific error message in the build logs.
 
 ### Database Connection Error
 
